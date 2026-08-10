@@ -94,7 +94,7 @@
               (click)="setPriority('Urgent')"
             >
               Urgent
-              <img class="add-task__priority-icon" src="icons/board/prio-urgent.svg" alt="" />
+              <img class="add-task__priority-icon" src="icns/board/prio-urgent.svg" alt="" />
             </button>
 
             <button
@@ -106,7 +106,7 @@
               (click)="setPriority('Medium')"
             >
               Medium
-              <img class="add-task__priority-icon" src="icons/board/prio-medium.svg" alt="" />
+              <img class="add-task__priority-icon" src="icns/board/prio-medium.svg" alt="" />
             </button>
 
             <button
@@ -118,7 +118,7 @@
               (click)="setPriority('Low')"
             >
               Low
-              <img class="add-task__priority-icon" src="icons/board/prio-low.svg" alt="" />
+              <img class="add-task__priority-icon" src="icns/board/prio-low.svg" alt="" />
             </button>
           </div>
         </div>
@@ -139,7 +139,7 @@
                 (click)="$event.stopPropagation(); dropdownOpen = true"
               />
               <img
-                src="icons/other/arrow_drop_down.svg"
+                src="icns/other/arrow_drop_down.svg"
                 class="add-task__assigned-arrow"
                 [class.add-task__assigned-arrow--open]="dropdownOpen"
                 alt=""
@@ -168,8 +168,8 @@
                       class="add-task__checkbox"
                       [src]="
                         selectedContacts.some((sc) => sc.id === c.id)
-                          ? 'icons/board/checkbox_checked.svg'
-                          : 'icons/board/checkbox.svg'
+                          ? 'icns/board/checkbox_checked.svg'
+                          : 'icns/board/checkbox.svg'
                       "
                       alt=""
                     />
@@ -227,7 +227,7 @@
                 {{ taskForm.get('category')?.value || 'Select task category' }}
               </span>
               <img
-                src="icons/other/arrow_drop_down.svg"
+                src="icns/other/arrow_drop_down.svg"
                 class="add-task__assigned-arrow"
                 [class.add-task__assigned-arrow--open]="categoryDropdownOpen"
                 alt=""
@@ -284,7 +284,7 @@
         @if (taskToEdit) {
           <button type="submit" class="btn btn-primary" [disabled]="isSubmitting">
             Ok
-            <img src="icons/other/check.svg" alt="" />
+            <img src="icns/other/check.svg" alt="" />
           </button>
         } @else {
           <button type="button" class="btn btn-secondary" (click)="onCancelOrClear()">
@@ -301,7 +301,7 @@
 
           <button type="submit" class="btn btn-primary" [disabled]="isSubmitting">
             Create Task
-            <img src="icons/other/check.svg" alt="" />
+            <img src="icns/other/check.svg" alt="" />
           </button>
         }
       </div>

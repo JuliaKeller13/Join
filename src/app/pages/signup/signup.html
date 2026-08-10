@@ -6,7 +6,7 @@
 
     <main class="signup-form-container">
       <button class="back-button" type="button" routerLink="/login">
-        <img src="icons/other/arrow.svg" alt="Back" />
+        <img src="icns/other/arrow.svg" alt="Back" />
       </button>
       <div class="headline">
         <h2>Sign up</h2>
@@ -16,7 +16,7 @@
       <form [formGroup]="form" class="form" (ngSubmit)="signUp()" novalidate>
         <mat-form-field appearance="outline" class="custom-input" subscriptSizing="dynamic">
           <input matInput formControlName="name" placeholder="Name" autocomplete="off" />
-          <img matSuffix src="icons/form/person.svg" alt="user" />
+          <img matSuffix src="icns/form/person.svg" alt="user" />
           @if (form.get('name')?.hasError('required')) {
             <mat-error>Field is required</mat-error>
           }
@@ -27,7 +27,7 @@
 
         <mat-form-field appearance="outline" class="custom-input" subscriptSizing="dynamic">
           <input matInput formControlName="email" type="email" placeholder="Email" autocomplete="off" />
-          <img matSuffix src="icons/form/mail.svg" alt="mail" />
+          <img matSuffix src="icns/form/mail.svg" alt="mail" />
           @if (form.get('email')?.touched && form.get('email')?.hasError('required')) {
             <mat-error>Email is required.</mat-error>
           }
@@ -45,11 +45,11 @@
             autocomplete="new-password"
           />
           @if (!form.get('password')?.value) {
-            <img matSuffix src="icons/form/lock.svg" alt="lock" />
+            <img matSuffix src="icns/form/lock.svg" alt="lock" />
           } @else {
             <img
               matSuffix
-              [src]="showPassword() ? 'icons/form/visibility.svg' : 'icons/form/visibility_off.svg'"
+              [src]="showPassword() ? 'icns/form/visibility.svg' : 'icns/form/visibility_off.svg'"
               alt="toggle password visibility"
               (click)="togglePassword()"
               style="cursor: pointer"
@@ -72,11 +72,11 @@
             autocomplete="new-password"
           />
           @if (!form.get('confirmPassword')?.value) {
-            <img matSuffix src="icons/form/lock.svg" alt="lock" />
+            <img matSuffix src="icns/form/lock.svg" alt="lock" />
           } @else {
             <img
               matSuffix
-              [src]="showConfirmPassword() ? 'icons/form/visibility.svg' : 'icons/form/visibility_off.svg'"
+              [src]="showConfirmPassword() ? 'icns/form/visibility.svg' : 'icns/form/visibility_off.svg'"
               alt="toggle password visibility"
               (click)="toggleConfirmPassword()"
               style="cursor: pointer"
@@ -100,7 +100,7 @@
         <div class="checkbox-container">
           <div class="custom-checkbox" (click)="toggleAcceptTerms()">
             <img
-              [src]="form.get('acceptTerms')?.value ? 'icons/board/checkbox_checked.svg' : 'icons/board/checkbox.svg'"
+              [src]="form.get('acceptTerms')?.value ? 'icns/board/checkbox_checked.svg' : 'icns/board/checkbox.svg'"
               [alt]="form.get('acceptTerms')?.value ? 'checked' : 'unchecked'"
               class="checkbox-icon"
             />

@@ -1,7 +1,7 @@
 <section class="top-line">
   <app-category-badge [category]="task.category" [inDialog]="true" />
   <button class="close-button" (click)="closed.emit()">
-    <img src="icons/other/close.svg" alt="close" />
+    <img src="icns/other/close.svg" alt="close" />
   </button>
 </section>
 
@@ -19,7 +19,7 @@
     <span class="meta-value priority">
       {{ task.priority }}
       <img
-        [src]="'icons/board/prio-' + (task.priority | lowercase) + '.svg'"
+        [src]="'icns/board/prio-' + (task.priority | lowercase) + '.svg'"
         [alt]="task.priority + ' priority'"
       />
     </span>
@@ -49,7 +49,7 @@
       <div class="subtask-item" (click)="subtaskToggled.emit(subtask)">
         <img
           [src]="
-            subtask.completed ? 'icons/board/checkbox_checked.svg' : 'icons/board/checkbox.svg'
+            subtask.completed ? 'icns/board/checkbox_checked.svg' : 'icns/board/checkbox.svg'
           "
           [alt]="subtask.completed ? 'checked' : 'unchecked'"
           class="checkbox-icon"

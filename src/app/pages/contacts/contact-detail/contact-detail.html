@@ -9,7 +9,7 @@
         <div class="contacts__divider-mobile"></div>
       </div>
       <button class="contacts__back-btn" (click)="back.emit()">
-        <img src="icons/other/arrow.svg" alt="Back" />
+        <img src="icns/other/arrow.svg" alt="Back" />
       </button>
     </div>
     <div class="contacts__detail-top">
@@ -74,16 +74,16 @@
 
 <!-- MOBILE OPTIONS BUTTON -->
 <button class="contacts__options-btn-mobile" (click)="openMobileMenu()">
-  <img src="icons/other/close.svg" alt="Options" style="filter: brightness(0) invert(1)" />
+  <img src="icns/other/close.svg" alt="Options" style="filter: brightness(0) invert(1)" />
 </button>
 @if (mobileMenuVisible()) {
 <div class="contacts__mobile-menu-overlay" [class.slide-out]="!mobileMenuOpen()" (click)="closeMobileMenu()">
   <div class="user-menu contacts__mobile-menu" [class.slide-out]="!mobileMenuOpen()" (click)="$event.stopPropagation()">
     <button class="user-menu-item" (click)="edit.emit(); closeMobileMenu()">
-      <img src="icons/other/edit.svg" alt="Edit" class="contacts__action-img" /> Edit
+      <img src="icns/other/edit.svg" alt="Edit" class="contacts__action-img" /> Edit
     </button>
     <button class="user-menu-item" (click)="delete.emit(); closeMobileMenu()">
-      <img src="icons/other/delete.svg" alt="Delete" class="contacts__action-img" /> Delete
+      <img src="icns/other/delete.svg" alt="Delete" class="contacts__action-img" /> Delete
     </button>
   </div>
 </div>

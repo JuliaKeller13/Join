@@ -109,7 +109,7 @@ export class TaskCardComponent {
    */
   getPriorityIcon(priority: string): string {
     const p = priority?.toLowerCase();
-    return `./icons/board/prio-${p === 'urgent' || p === 'medium' || p === 'low' ? p : 'low'}.svg`;
+    return `./icns/board/prio-${p === 'urgent' || p === 'medium' || p === 'low' ? p : 'low'}.svg`;
   }
 
   /**

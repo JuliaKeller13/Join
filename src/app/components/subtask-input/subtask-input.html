@@ -6,14 +6,14 @@
     @if (inputFocus || inputValue) {
     <button type="button" class="subtask__btn" (mousedown)="$event.preventDefault()"
       (click)="inputValue = ''; inputFocus = false">
-      <img src="icons/other/close.svg" alt="Clear" />
+      <img src="icns/other/close.svg" alt="Clear" />
     </button>
 
     <div class="subtask__divider" aria-hidden="true"></div>
 
     <button type="button" class="subtask__btn" (mousedown)="$event.preventDefault()"
       (click)="add(); inputFocus = false">
-      <img src="icons/other/check.svg" alt="Confirm" />
+      <img src="icns/other/check.svg" alt="Confirm" />
     </button>
     }
   </div>
@@ -31,11 +31,11 @@
       </div>
       <div class="subtask__item-buttons">
         <button type="button" class="subtask__item-btn" (click)="remove($index)">
-          <img src="icons/other/delete.svg" alt="Delete" />
+          <img src="icns/other/delete.svg" alt="Delete" />
         </button>
         <div class="subtask__divider" aria-hidden="true"></div>
         <button type="button" class="subtask__item-btn" (click)="save($index)">
-          <img src="icons/other/check.svg" alt="Save" />
+          <img src="icns/other/check.svg" alt="Save" />
         </button>
       </div>
     </div>
@@ -46,11 +46,11 @@
     </div>
     <div class="subtask__item-buttons">
       <button type="button" class="subtask__item-btn" (click)="edit($index)">
-        <img src="icons/other/edit.svg" alt="Edit" />
+        <img src="icns/other/edit.svg" alt="Edit" />
       </button>
       <div class="subtask__divider" aria-hidden="true"></div>
       <button type="button" class="subtask__item-btn" (click)="remove($index)">
-        <img src="icons/other/delete.svg" alt="Delete" />
+        <img src="icns/other/delete.svg" alt="Delete" />
       </button>
     </div>
     }

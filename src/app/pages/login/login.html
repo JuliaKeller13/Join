@@ -28,7 +28,7 @@
               placeholder="Email"
               (input)="clearLoginError()"
             />
-            <img matSuffix src="icons/form/mail.svg" alt="mail" />
+            <img matSuffix src="icns/form/mail.svg" alt="mail" />
             @if (form.get('email')?.touched && form.get('email')?.hasError('required')) {
               <mat-error>Email is required.</mat-error>
             }
@@ -47,7 +47,7 @@
             />
             <img
               matSuffix
-              [src]="showPassword() ? 'icons/form/visibility.svg' : 'icons/form/visibility_off.svg'"
+              [src]="showPassword() ? 'icns/form/visibility.svg' : 'icns/form/visibility_off.svg'"
               alt="toggle password visibility"
               (click)="togglePassword()"
               style="cursor: pointer"
