@@ -1,133 +1,129 @@
-# Join – Kanban Project Management Application
+<div align="center">
 
-An agile, collaborative project management application inspired by Kanban boards, developed as a group project within the Developer Akademie.
+<img src="public/logo/join-logo.svg" alt="Join logo" width="130">
 
-[![Angular](https://img.shields.io/badge/Angular-21.2-DD0031?style=flat-square&logo=angular&logoColor=white)](https://angular.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-007ACC?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Supabase](https://img.shields.io/badge/Supabase-Database-3ECF8E?style=flat-square&logo=supabase&logoColor=white)](https://supabase.com/)
+# Join
 
-A live demo is available at: [jensbaumandev.github.io/join](https://jensbaumandev.github.io/join/)
+### Kanban Task Management | Angular & Supabase
 
----
+A collaborative task-management application for organizing work, tracking progress and coordinating tasks.
 
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Tech Stack](#tech-stack)
-4. [Installation & Setup](#installation--setup)
-5. [Project Structure](#project-structure)
-6. [Documentation](#documentation)
-7. [Contributors](#contributors)
+**Team project developed during the Developer Akademie program.**
 
----
+[![Angular](https://img.shields.io/badge/Angular-21-DD0031?logo=angular&logoColor=white)](https://angular.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?logo=supabase&logoColor=white)](https://supabase.com/)
 
-## Introduction
+**[Live Demo](https://join.juliakeller-dev.de/login) · [Source Code](https://github.com/JuliaKeller13/Join) · [Original Team Repository](https://github.com/JensBaumannDev/Join)**
 
-**Join** is a client-side web application designed to facilitate team task coordination and workflow visualization. Emulating Kanban methodology, the platform allows teams to distribute tasks, monitor state transitions, and maintain a centralized contact directory.
-
-This application is built with **Angular 21** using **Signals** for state propagation, integrated with a **Supabase** backend for authentication and data persistence.
+</div>
 
 ---
 
-## Features
+## About the Project
 
-* **User Authentication & Authorization:** Secure registration and login workflows via Supabase, including an instantaneous Guest Login mode for evaluation.
-* **Kanban Board:** Multi-column board layout partitioned into *To Do*, *In Progress*, *Await Feedback*, and *Done* states. Tasks can be shifted between categories using interactive controls and drag-and-drop actions.
-* **Task Management:** Form-based task creation supporting titles, descriptions, due dates, priority tiers (Low, Medium, Urgent), categories, and dynamic subtask lists.
-* **Contact Directory:** CRUD operations for contact management. Color-coded initials-based avatars are generated automatically upon contact creation.
-* **Dashboard Summary:** Overview statistics displaying high-priority deadlines, total task counts, and state summaries alongside context-aware greetings.
+Join is a Kanban-style web application that helps users organize tasks and monitor their progress. The application was developed collaboratively by a four-person team. It uses **Angular and TypeScript** for the frontend and **Supabase** for authentication and data persistence.
 
----
+This repository is my fork of the [shared team repository](https://github.com/JensBaumannDev/Join). The features below describe the **combined team result**; my own implementation work is listed separately under *My Contributions*.
+
+## Features - Team Project
+
+- **Authentication:** Sign up, log in and explore the application with a guest account.
+- **Kanban board:** Track tasks across *To do*, *In progress*, *Await feedback* and *Done*.
+- **Task management:** Create, edit, assign and prioritize tasks; manage subtasks and due dates.
+- **Drag and drop:** Move and reorder tasks on the board.
+- **Contacts:** Manage a contact directory and assign contacts to tasks.
+- **Summary dashboard:** View task statistics and an overview of ongoing work.
+- **Responsive interface:** Use the application on desktop and mobile devices.
+
+## My Contributions - Julia Keller
+
+The following work is supported by my commits in the shared Git history:
+
+- **Login and registration interfaces:** Developed and refined the Angular login and sign-up pages, including reactive forms, input validation, password visibility and responsive styling.
+- **Authentication user experience:** Implemented guest login, improved error and loading states, and contributed fixes to session initialization and route protection.
+- **Kanban workflow:** Improved task creation and editing interfaces, and implemented persistence of task ordering through the task service after drag-and-drop operations.
+- **UI and usability:** Refined animations, form styling, dialog layouts and mobile/iOS compatibility; made targeted improvements to the contact list.
+- **Team collaboration:** Integrated changes through the shared Git workflow and contributed fixes during testing and integration.
+
+These are **selected contributions**, not a claim of sole authorship of the application. Other functionality was implemented collaboratively or by other team members.
 
 ## Tech Stack
 
-* **Frontend Framework:** Angular 21 (utilizing reactive Signals)
-* **Programming Language:** TypeScript
-* **Database & Auth Backend:** Supabase (PostgreSQL, Row Level Security)
-* **Styling:** CSS3 / SCSS (utilizing custom variables, Flexbox, and CSS Grid)
-* **Unit Testing:** Vitest
-* **Documentation Generator:** Compodoc (JSDoc-compliant)
+| Area | Technologies |
+| --- | --- |
+| Frontend | Angular 21, TypeScript, HTML, SCSS |
+| UI and state | Angular Signals, Reactive Forms, Angular Material / CDK |
+| Authentication and data | Supabase, PostgreSQL |
+| Tooling | Git, npm, Vitest, Compodoc |
 
----
+## Getting Started
 
-## Installation & Setup
+### Requirements
 
-### Prerequisites
-* [Node.js](https://nodejs.org/) (Version 18 or higher)
-* npm (Node Package Manager)
+- Node.js and npm compatible with Angular 21
+- Access to a configured Supabase project for authentication and data storage
 
-### 1. Clone the repository
+### Local setup
+
 ```bash
-git clone https://github.com/JensBaumannDev/Join.git
+git clone https://github.com/JuliaKeller13/Join.git
 cd Join
-```
-
-### 2. Install package dependencies
-```bash
 npm install
 ```
 
-### 3. Configure Supabase Credentials
-To connect the application to your own Supabase instance, update your environment configuration file at `src/environments/environment.ts`:
-```typescript
-export const environment = {
-  production: false,
-  supabaseUrl: 'YOUR_SUPABASE_URL',
-  supabaseKey: 'YOUR_SUPABASE_ANON_KEY',
-};
-```
+Review the Supabase configuration in `src/environments/environment.ts` and configure your own project as needed. Use only a **public/publishable Supabase client key** in frontend code; never place a service-role or other secret key in the browser application.
 
-### 4. Run the development server
+Run the development server:
+
 ```bash
-npm run start
+npm start
 ```
-The application will launch and compile. Navigate to `http://localhost:4200` in your web browser.
 
----
+Open `http://localhost:4200/`.
+
+### Tests and documentation
+
+```bash
+npm test
+npm run docs
+```
+
+The documentation command starts the Compodoc documentation server. Test execution requires the dependencies and configuration described above.
 
 ## Project Structure
 
-A high-level directory tree outlining the Angular application structure:
-
 ```text
-join/
-├── src/
-│   ├── app/
-│   │   ├── components/      # Shared presentation components (Avatar, layouts, etc.)
-│   │   ├── pages/           # Routed view components (Board, Contacts, Summary, Authentication)
-│   │   ├── services/        # Service layer managing business logic and API requests
-│   │   └── app.routes.ts    # Application routing definitions
-│   ├── assets/              # Static assets, branding, and icons
-│   ├── index.html           # Main document template
-│   └── main.ts              # Angular entry point
-├── angular.json             # Workspace configuration
-├── package.json             # Project dependencies and script runner configurations
-└── README.md                # Project documentation
+src/
+├── app/
+│   ├── components/     # Reusable UI components and dialogs
+│   ├── guards/         # Route protection
+│   ├── pages/          # Login, signup, board, tasks, contacts and summary
+│   ├── services/       # Authentication, tasks, contacts and Supabase access
+│   ├── interfaces/     # Application data types
+│   └── app.routes.ts   # Application routes
+├── environments/      # Supabase environment configuration
+└── styles/            # Shared SCSS styles
+public/                # Icons, logos and fonts
 ```
 
----
+## Team & Credits
 
-## Documentation
+Join was developed as a **group project**. The following contributors are credited in the original project documentation:
 
-Code documentation is maintained using JSDoc formatting. You can compile and host an interactive HTML documentation site using Compodoc:
+| Contributor | GitHub |
+| --- | --- |
+| [Jens Baumann](https://github.com/JensBaumannDev) | [@JensBaumannDev](https://github.com/JensBaumannDev) |
+| [Julia Keller](https://github.com/JuliaKeller13) | [@JuliaKeller13](https://github.com/JuliaKeller13) |
+| [Temirlan Gashimov](https://github.com/TemirlanGashimov) | [@TemirlanGashimov](https://github.com/TemirlanGashimov) |
+| [Mario Ramirez](https://github.com/marioramirez90) | [@marioramirez90](https://github.com/marioramirez90) |
 
-```bash
-npm run docs
-```
-This builds the site and starts a local web server at `http://localhost:8080`.
-
----
-
-## Contributors
-
-This application was collaboratively developed by the following team members:
-
-| Contributor | GitHub | LinkedIn |
-| :--- | :--- | :--- |
-| **Jens Baumann** | [@JensBaumannDev](https://github.com/JensBaumannDev) | [Jens Baumann](https://www.linkedin.com/in/jens-baumann-7a6866315/) |
-| **Julia Keller** | [@JuliaKeller13](https://github.com/JuliaKeller13) | [Julia Keller](https://www.linkedin.com/in/julia-keller-970409389/) |
-| **Temirlan Gashimov** | [@TemirlanGashimov](https://github.com/TemirlanGashimov) | [Temirlan Gashimov](https://www.linkedin.com/in/temerlan-gashimov-8927291b2) |
-| **Mario Ramirez** | [@marioramirez90](https://github.com/marioramirez90) | [Mario Ramirez](https://www.linkedin.com/in/mario-ramirez-668288283) |
+The [original team repository](https://github.com/JensBaumannDev/Join) provides the shared project history. This fork showcases the project and my contributions; it is **not** presented as an independently or solely developed application.
 
 ---
-Developed as part of the software engineering curriculum at the [Developer Akademie](https://developerakademie.com/).
+
+<div align="center">
+
+**Julia Keller** · [Portfolio](https://juliakeller-dev.de/) · [GitHub Profile](https://github.com/JuliaKeller13)
+
+</div>
