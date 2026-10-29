@@ -20,13 +20,25 @@ A collaborative task-management application for organizing work, tracking progre
 
 ---
 
+## Table of Contents
+
+- [About the Project](#about-the-project)
+- [Features — Team Project](#features--team-project)
+- [My Contributions — Julia Keller](#my-contributions--julia-keller)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Team & Credits](#team--credits)
+
+---
+
 ## About the Project
 
 Join is a Kanban-style web application that helps users organize tasks and monitor their progress. The application was developed collaboratively by a four-person team. It uses **Angular and TypeScript** for the frontend and **Supabase** for authentication and data persistence.
 
 This repository is my fork of the [shared team repository](https://github.com/JensBaumannDev/Join). The features below describe the **combined team result**; my own implementation work is listed separately under *My Contributions*.
 
-## Features - Team Project
+## Features — Team Project
 
 - **Authentication:** Sign up, log in and explore the application with a guest account.
 - **Kanban board:** Track tasks across *To do*, *In progress*, *Await feedback* and *Done*.
@@ -36,7 +48,7 @@ This repository is my fork of the [shared team repository](https://github.com/Je
 - **Summary dashboard:** View task statistics and an overview of ongoing work.
 - **Responsive interface:** Use the application on desktop and mobile devices.
 
-## My Contributions - Julia Keller
+## My Contributions — Julia Keller
 
 The following work is supported by my commits in the shared Git history:
 
@@ -109,16 +121,18 @@ public/                # Icons, logos and fonts
 
 ## Team & Credits
 
-Join was developed as a **group project**. The following contributors are credited in the original project documentation:
+Join was developed collaboratively by four developers during the **Developer Akademie** program. All contributors are credited below.
 
-| Contributor | GitHub |
-| --- | --- |
-| [Jens Baumann](https://github.com/JensBaumannDev) | [@JensBaumannDev](https://github.com/JensBaumannDev) |
-| [Julia Keller](https://github.com/JuliaKeller13) | [@JuliaKeller13](https://github.com/JuliaKeller13) |
-| [Temirlan Gashimov](https://github.com/TemirlanGashimov) | [@TemirlanGashimov](https://github.com/TemirlanGashimov) |
-| [Mario Ramirez](https://github.com/marioramirez90) | [@marioramirez90](https://github.com/marioramirez90) |
+| Contributor | GitHub | LinkedIn |
+| :--- | :--- | :--- |
+| **Jens Baumann** | [@JensBaumannDev](https://github.com/JensBaumannDev) | [Jens Baumann](https://www.linkedin.com/in/jens-baumann-7a6866315/) |
+| **Julia Keller** | [@JuliaKeller13](https://github.com/JuliaKeller13) | [Julia Keller](https://www.linkedin.com/in/julia-keller-970409389/) |
+| **Temirlan Gashimov** | [@TemirlanGashimov](https://github.com/TemirlanGashimov) | [Temirlan Gashimov](https://www.linkedin.com/in/temerlan-gashimov-8927291b2) |
+| **Mario Ramirez** | [@marioramirez90](https://github.com/marioramirez90) | [Mario Ramirez](https://www.linkedin.com/in/mario-ramirez-668288283) |
 
-The [original team repository](https://github.com/JensBaumannDev/Join) provides the shared project history. This fork showcases the project and my contributions; it is **not** presented as an independently or solely developed application.
+**[Original Team Repository](https://github.com/JensBaumannDev/Join)** · [My GitHub Fork](https://github.com/JuliaKeller13/Join)
+
+This fork presents the **shared team project** and documents my individual contributions above; it does not claim sole authorship.
 
 ---
 
